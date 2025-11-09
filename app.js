@@ -203,6 +203,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!isRecording) { // chỉ cho nhập khi không ghi âm
                 textArea.value += btn.textContent;
                 savedTranscript = textArea.value;
+                btnCopy.disabled = !textArea.value;
+                btnClear.disabled = !textArea.value;
                 updateCopyClearButtons();
             }
         });
